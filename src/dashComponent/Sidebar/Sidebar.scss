@@ -1,0 +1,91 @@
+.sidebar {
+  min-height: 100vh;
+  background-color: #cac3c3;
+  padding: 20px;
+  position: fixed; /* Remain fixed on the left */
+  top: 0;
+  left: 0;
+  min-width: 245px; /* Optional: Minimum width for sidebar */
+
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.logoText{
+  margin-bottom: -30px;
+}
+
+.logo-container {
+  display: flex;
+  color: #004663;
+  white-space: nowrap;
+  font: 800 30px/1 Poppins, sans-serif;
+  transition: color 0.3s ease;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.separator {
+  width: 95%; /* Adjust width here */
+  height: 2px; /* Line thickness */
+  background-color: gray; /* Line color */
+  margin-top: -2px;  
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* Space between the icon and text */
+  transition: filter 0.3s ease;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center; /* Align icon and text horizontally */
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(0, 70, 99, 0.1);
+
+    .icon {
+      filter: brightness(0); /* Fill blank areas with black */
+    }
+  }
+
+  &.active {
+    background-color: rgba(0, 70, 99, 0.4);
+
+    .icon {
+      filter: brightness(0); /* Keep black fill on active state */
+    }
+  }
+}
+
+.menu-link {
+  display: flex; /* Align icon and text on the same line */
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.text {
+  margin-left: 10px; /* Add spacing between the icon and text */
+}

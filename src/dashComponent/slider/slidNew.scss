@@ -1,0 +1,125 @@
+.slider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column; // Stack big image and small images vertically
+  align-items: center;
+  gap: 15px;
+
+  .fullSlider {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+    .arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      img {
+        width: 50px;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(0.8);
+        }
+
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: contain;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .bigImage {
+    width: 70%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .smallImages {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+    overflow-x: auto; // Enable horizontal scrolling
+    white-space: nowrap; // Prevent images from wrapping
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      height: 8px; // Set the height of the scrollbar
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; // Scrollbar thumb color
+      border-radius: 4px; // Rounded corners
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f5f5f5; // Scrollbar track color
+    }
+
+    img {
+      width: 30%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+    }
+  }
+}

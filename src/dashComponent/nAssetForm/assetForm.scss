@@ -1,0 +1,81 @@
+// styles/AssetForm.scss
+.asset-form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    // border-radius: 10px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: -12px;
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      input, select, textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+  
+        &:focus {
+          border-color: #007bff;
+        }
+      }
+  
+      textarea {
+        resize: none;
+        height: 80px;
+      }
+    }
+  
+    .location {
+      display: flex;
+      gap: 10px;
+  
+      input {
+        width: 48%;
+      }
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 10px;
+  
+      .cancel-btn {
+        background: #ccc;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:hover {
+          background: #999;
+        }
+      }
+  
+      .save-btn {
+        background: #004663;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background: #004663;
+        }
+      }
+    }
+  }
+  
