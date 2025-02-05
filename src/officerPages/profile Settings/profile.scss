@@ -106,7 +106,7 @@
               font-size: 1.2rem;
               font-weight: bold;
               margin-bottom: 15px;
-              color: #1b4332;
+              color: black;
               position: relative; // Ensures the pseudo-element is positioned relative to this container
               width: 100%; // Adjust width as needed
               margin: auto; // Centers it within parent container
@@ -130,7 +130,7 @@
                 display: block;
                 font-size: 0.9rem;
                 margin-bottom: 5px;
-                color: #1b4332;
+                color: rgb(24, 24, 24);
               }
 
               .textInput {
@@ -171,6 +171,7 @@
         }
         
         .profileRightContainer {
+          margin-top: 184px;
           .actionButtons {
             display: flex;
             justify-content: flex-end;

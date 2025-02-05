@@ -4,16 +4,16 @@ import properties from "../../dummyData"; // Import your dummy data
 import './myAssetsCards.scss';
 
 const MyAssetsCards = () => {
-  const [likedCards, setLikedCards] = useState({}); // State to track liked cards
+  // const [likedCards, setLikedCards] = useState({}); // State to track liked cards
   const [showAll, setShowAll] = useState(false); // State to control whether to show all cards
 
-  // Function to toggle the heart icon
-  const toggleLike = (id) => {
-    setLikedCards((prev) => ({
-      ...prev,
-      [id]: !prev[id], // Toggle the liked state for the card
-    }));
-  };
+  // // Function to toggle the heart icon
+  // const toggleLike = (id) => {
+  //   setLikedCards((prev) => ({
+  //     ...prev,
+  //     [id]: !prev[id], // Toggle the liked state for the card
+  //   }));
+  // };
 
   // Number of cards to show by default
   const defaultCardsToShow = 3;
@@ -34,7 +34,7 @@ const MyAssetsCards = () => {
                 <div className="userImageContainer">
                   <img src={property.profileImage} alt="User" className="userImage" />
                 </div>
-                <button
+                {/* <button
                   className="heartButton"
                   onClick={() => toggleLike(property.id)}
                 >
@@ -43,7 +43,7 @@ const MyAssetsCards = () => {
                     alt="Like"
                     className="heartIcon"
                   />
-                </button>
+                </button> */}
               </div>
               <div className="cardBody">
                 <h4>{property.title}</h4>

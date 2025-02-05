@@ -3,9 +3,7 @@
   height: 100vh;
 
   .sideContainer {
-    // flex: 1; /* Sidebar takes 1 part of the total flex space */
     min-width: 245px; /* Minimum width for sidebar */
-    // background-color: #f4f4f4;
   }
 
   .homeContainer {
@@ -13,15 +11,6 @@
     display: flex;
     flex-direction: column; /* Stack items vertically */
   }
-
-  // .separator2 {
-  //   display: block;
-  //   width: 100%;
-  //   height: 2px;
-  //   background-color: black;
-  //   margin-top: -20px;
-  // }
-  
 
   .latestAssetContainer,
   .auctionersContainer {
@@ -32,4 +21,13 @@
     padding: 20px;
     margin-top: 20px;
   }
+
+  // Add additional styles for separators if needed
+  // .separator2 {
+  //   display: block;
+  //   width: 100%;
+  //   height: 2px;
+  //   background-color: black;
+  //   margin-top: -20px;
+  // }
 }

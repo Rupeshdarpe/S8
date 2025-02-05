@@ -1,5 +1,4 @@
 import { SearchBar } from '../searchBar/SearchBar';
-// import {User} from '../user/User';
 import { UserAvatar } from '../user/UserAvatar';
 import './Header.scss';
 

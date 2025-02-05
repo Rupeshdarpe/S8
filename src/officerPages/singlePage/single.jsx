@@ -5,9 +5,16 @@ import Slider from "../../dashComponent/slider/Slider";
 import Map from "../../dashComponent/map/Map"; // Import Map component
 import { singlePostData } from "../../dummyData"; 
 import "./single.scss";
+import { useParams } from "react-router-dom"; 
 
 const Single = () => {
-  const post = singlePostData[0];
+  const { id } = useParams(); // Get ID from the URL
+  const post = singlePostData.find(item => item.id === parseInt(id)); // Find matching property
+
+  if (!post) {
+    return <h2>Property Not Found!</h2>; // If ID is invalid
+  }
+
   const pageName = "My Assets";
   const title = post.title;
 
@@ -67,8 +74,44 @@ const Single = () => {
             <div className="auctionDetails">
   <div className="auction-column">
     <div className="auctionItem">
+      <span className="label">Area:</span>
+      <span className="value">{post.area} sq.ft</span>
+    </div>
+    <div className="auctionItem">
       <span className="label">Category:</span>
       <span className="value">{post.category}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Borrowers:</span>
+      <span className="value">{post.borrower}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Bank Name:</span>
+      <span className="value">{post.bankName}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Amount Due:</span>
+      <span className="value">{post.dueAmount}</span>
+    </div>
+    {/* <div className="auctionItem">
+      <span className="label">Reserve Price:</span>
+      <span className="value">{post.reservPrice}</span>
+    </div> */}
+    <div className="auctionItem">
+      <span className="label">Earnest Money Deposit:</span>
+      <span className="value">{post.deposit}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Bid Increase Amount</span>
+      <span className="value">{post.bidInc}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Contact No.:</span>
+      <span className="value">{post.contactNo}</span>
+    </div>
+    <div className="auctionItem">
+      <span className="label">Auction Type:</span>
+      <span className="value">{post.auctionType}</span>
     </div>
     <div className="auctionItem">
       <span className="label">Auction Date:</span>
@@ -76,20 +119,25 @@ const Single = () => {
     </div>
     <div className="auctionItem">
       <span className="label">Auction Time:</span>
-      <span className="value">{post.auctionTime}</span>
+      <span className="value">{post.time}</span>
     </div>
     <div className="auctionItem">
-      <span className="label">Area:</span>
-      <span className="value">{post.area} sq.ft</span>
+      <span className="label">Nereby Places:</span>
+      <span className="value">{post.nearbyPlace}</span>
     </div>
     <div className="auctionItem">
-      <span className="label">Bank Name:</span>
-      <span className="value">{post.bankName}</span>
+      <span className="label">City:</span>
+      <span className="value">{post.city}</span>
     </div>
     <div className="auctionItem">
-      <span className="label">Contact No.:</span>
-      <span className="value">{post.contactNo}</span>
+      <span className="label">State:</span>
+      <span className="value">{post.state}</span>
     </div>
+    <div className="auctionItem">
+      <span className="label">Message:</span>
+      <span className="value">{post.message}</span>
+    </div>
+   
   </div>
 </div>
 

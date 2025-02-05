@@ -17,13 +17,20 @@
   }
   
   .searchInputWrapper {
+    width: 600px;
     border-radius: 6px;
     background-color: rgba(245, 245, 245, 1);
     display: flex;
     gap: 16px;
     font-size: 14px;
-    color: rgba(120, 116, 134, 1);
+    color: rgb(6, 6, 6);
     padding: 11px 17px;
+    transition: border 0.3s ease; /* Smooth transition for border */ 
+    // border: 2px solid #000; 
+  }
+
+   .searchInputWrapper:focus-within {
+    border: 2px solid gray; /* Blue border when input is focused */
   }
   
   .searchIcon {

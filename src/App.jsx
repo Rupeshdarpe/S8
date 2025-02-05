@@ -1,13 +1,13 @@
 
 import './App.css'
-import Home from './officerPages/home/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyAssets from './officerPages/my Assets/MyAssets';
 import Single from './officerPages/singlePage/single';
-import Profile from './officerPages/profile/Profile';
 import Auction from './officerPages/auction/Auction';
 import AssetsViwe from './officerPages/my Assets/AssetsView';
 import AddAsset from './officerPages/add new asset/AddAsset';
+import Profilepage from './officerPages/profilePage/ProfilePage';
+import Profile from './officerPages/profile Settings/Profile';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,7 +18,7 @@ function App() {
       {/* <h1>Welcome to S8</h1> 
       <SidebarLayout />
        */}
-       <Route path="/" element={<Home />} />
+       <Route path="/" element={<Profilepage/>} />
        <Route path="/myAssets" element={<MyAssets/>} />
        <Route path="/profile" element={<Profile />} />
        <Route path="/auction" element={<Auction />} />

@@ -9,23 +9,40 @@
 
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-}
-
-.logoText{
-  margin-bottom: -30px;
-}
-
 .logo-container {
   display: flex;
-  color: #004663;
-  white-space: nowrap;
-  font: 800 30px/1 Poppins, sans-serif;
-  transition: color 0.3s ease;
+  justify-content: start;
   align-items: center;
-  margin-top: -15px;
+  margin-bottom: 10px;
+  min-height: 56px;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(67, 67, 67);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -10px;
+}
+
+.inner-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #40916c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text {
+  color: #004663;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .separator {

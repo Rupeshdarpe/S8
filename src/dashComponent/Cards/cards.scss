@@ -61,8 +61,8 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 250px; // Minimum width for each card
-    height: 300px; // Set a fixed height for the card
+    min-width: 250px;
+    min-height: 350px; // Ensure there's enough height for content
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -74,92 +74,69 @@
 
     .cardHeader {
       position: relative;
-      flex: 1; // Allow the header to take up remaining space
+      width: 100%;
+      height: 150px; // Set a fixed height for the header section
+
       .propertyImage {
-        width: 100%;
-        height: 100%; // Make the image fill the header
-        object-fit: cover; // Ensure the image covers the area without distortion
+        width: 100%; // Ensure the image covers the entire width
+        height: 100%; // Ensure the image covers the entire height
+        object-fit: cover; // Ensure the image does not distort
+        object-position: center; // Center the image inside the container
       }
 
       .userImageContainer {
         position: absolute;
-        bottom: -20px; // Half outside the image
+        bottom: -20px; // Position the user image outside the card
         left: 10px;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         overflow: hidden;
-        border: 3px solid white; // Optional: Add a border to make it stand out
+        border: 3px solid white; // Optional: Add a border to make the image stand out
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
         .userImage {
-          width: 100%;
+          width: 100%; // Ensure the user image fills the container
           height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      .heartButton {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-
-        .heartIcon {
-          width: 24px;
-          height: 24px;
-          transition: filter 0.3s ease;
-
-          &:hover {
-            filter: brightness(0.8);
-          }
+          object-fit: cover; // Maintain aspect ratio without distortion
         }
       }
     }
 
     .cardBody {
       padding: 15px;
-      flex-shrink: 0; // Prevent the body from shrinking
-      h4 {
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        margin: 0 0 10px 0;
-      }
-
-      p {
-        font-size: 14px;
-        color: #555;
-        margin: 0 0 10px 0;
-      }
-
-      .viewButton {
-        display: inline-block;
-        padding: 8px 16px;
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 14px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
+      flex-grow: 1;  // Allow the body to grow and take up remaining space
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;  // Ensure content is spaced out, and button stays at the bottom
     }
   }
 
-  // Styles for the "View All" button
+  .viewButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #004663;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Adjust the gap between button and auction date */
+    width: 100%; /* Adjust the width of the "View now" button */
+    max-width: 100px; /* Set a max-width if you want to limit the button size */
+    z-index: 10;
+    transition: background-color 0.3s ease;
 
-  // .viewAllCont {
-  //   position: absolute;  // This positions the container relative to its parent
-  //   right: 10px;  // Aligns the button to the right
-  //   // bottom: 10px;  // Adds a little bottom space to separate it from the cards
-  // }
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .viewAllCont {
+    position: relative; // Positions it properly within the container
+  }
+
   .viewAllButton {
     position: relative;
     padding: 10px 20px;

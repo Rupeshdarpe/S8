@@ -1,6 +1,6 @@
 import ContainerHeader from "../../dashComponent/addNew_asset_header/pathHeader";
-import AssetForm from "../../dashComponent/nAssetForm/AssetForm";
 import Header from "../../dashComponent/nav/header/Header";
+import AssetForm from "../../dashComponent/newAssetForm/AssetForm";
 import Sidebar from "../../dashComponent/Sidebar/Sidebar";
 import ImageUpload from "../../dashComponent/upload/ImageUpload";
 import "./addAsset.scss"
